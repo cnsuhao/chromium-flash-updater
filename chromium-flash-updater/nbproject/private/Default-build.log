@@ -1,0 +1,2 @@
+g++ -c -std=c++11  -g main.cpp -larchive
+g++ -std=c++11 -g -o test main.o -larchive 
