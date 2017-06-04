@@ -64,8 +64,7 @@ int main(int argc, char *argv[]) {
         std::ifstream inputFile("/usr/lib/chromium-browser/plugins/manifest.json");
         if (inputFile) {
             json myJson;
-            inputFile >> myJson;
-            inputFile.close();  
+            inputFile >> myJson;              
             
             // parse Chromium version from json
             std::string chromeVersion = myJson["version"];
@@ -94,7 +93,7 @@ int main(int argc, char *argv[]) {
         } else {
             std::cerr << "cannot open file... \n";
         }
-        
+        inputFile.close();
     
     } catch (const char *s){
         std::cout << s << "\n"; 
